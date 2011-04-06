@@ -1,0 +1,5 @@
+SlideMenu is a simple jQuery plugin for creating a menu that slides down from a bar on a webpage.
+
+It can be used in conjunction with the <a href="http://cherne.net/brian/resources/jquery.hoverIntent.html">hoverIntent</a> jQuery plugin.
+
+If hoverIntent is not included, it defaults to jQuery's native hover() function.
