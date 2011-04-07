@@ -5,22 +5,27 @@
 	<title></title>
 
 	<link rel="stylesheet" href=""/>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 	<style type="text/css">
-		body { font-family: "Tahoma Sans", sans-serif; }
+		body { 
+			font-family: "Merriweather", arial, serif; 
+			margin: 0;
+			padding: 0;
+		}
 		div#categorycontainer { 
-			background-color: #EFA743; 
-			border: 1px solid #C58227; 
+			background-color: #5E8C6A; 
+			border: 1px solid #4D7357; 
 			border-bottom: none; 
 			border-radius: 5px; 
 			-moz-border-radius: 5px; 
 			color: #fff;
-			margin-left: 20px;
+			margin: 0 auto;
 			height: 50px;
 			width: 600px; 
 		}
 		div #categorycontrols { 
-			background-color: #EFA743; 
-			border: 1px solid #C58227;
+			background-color: #5E8C6A; 
+			border: 1px solid #4D7357;
 			border-bottom-left-radius: 5px; 
 			border-bottom-right-radius: 5px;
  			-moz-border-bottom-left-radius: 5px; 
@@ -33,16 +38,17 @@
 			z-index: 9999; 
 		}
 		
-		.menutext { float: left; margin: 16px 0 0 10px; padding: 0; width: 200px; }
+		.menutext { float: left; margin: 16px 0 0 10px; padding: 0; width: 500px; }
 		#categorymenu { height: 40px; width: 595px; }
-		.preroll { background-color: #C58227; }
 		
 		#catbuttons { left: 15px; position: absolute; top: 180px; }
-		#catchecks { height: 80px; margin-top: 20px; width: 550px; }
+		#catchecks { font-size: 0.8em; height: 80px; margin-top: 20px; width: 550px; }
 		
 		.checkscol { float: left; margin: 0; padding: 0; width: 135px; }
 		
-		div.filterable { width: 700px; }
+		div.filterable { border-bottom: 1px dotted #8C2318; margin: 0 auto; width: 700px; }
+		div#wrapper { margin: 10px auto; width: 800px; }
+		div#content { border-radius: 10px; margin: 0 auto; width: 800px; }
 	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" ></script>
 	<script type="text/javascript" src="jquery.hoverintent.js"></script>
@@ -56,51 +62,99 @@
 </head>
 
 <body>
-	<div id="categorycontainer">
-		<div id="categorymenu">
-			<p class="menutext">Hover to Filter by Category</p>
-		</div>
-		<div id="categorycontrols" class="nothovering">
-			<div id="catchecks">
-				<div class="checkscol">
-					<!-- Each <input> needs a unique ID. The <label>'s 'for' field must match the <input>'s id. It doesn't matter what the ID is, as long as it's unique. -->
-					<!-- The 'value' field of each <input> is the category. It should match the text between the <label> tags. -->
-					<input type="checkbox" name="categories" value="Red" id="cat1" class="filter" /><label for="cat1">Red</label><br />
-					<input type="checkbox" name="categories" value="Orange" id="cat2" class="filter" /><label for="cat2">Orange</label><br />
-					<input type="checkbox" name="categories" value="Yellow" id="cat3" class="filter" /><label for="cat3">Yellow</label><br />
-					<input type="checkbox" name="categories" value="Green" id="cat4" class="filter" /><label for="cat4">Green</label><br />
-					<input type="checkbox" name="categories" value="Blue" id="cat5" class="filter" /><label for="cat5">Blue</label><br />
-					<input type="checkbox" name="categories" value="Violet" id="cat6" class="filter" /><label for="cat6">Violet</label><br />
-					<input type="checkbox" name="categories" value="Indigo" id="cat7" class="filter" /><label for="cat7">Indigo</label><br />
-					<input type="checkbox" name="categories" value="Puce" id="cat8" class="filter" /><label for="cat8">Puce</label><br />
-				</div>
-				<div class="checkscol">		
-					<input type="checkbox" name="categories" value="Lavender" id="cat9" class="filter" /><label for="cat9">Lavender</label><br />
-					<input type="checkbox" name="categories" value="Fuschia" id="cat10" class="filter" /><label for="cat10">Fuschia</label><br />	
-					<input type="checkbox" name="categories" value="Chartreuse" id="cat11" class="filter" /><label for="cat11">Chartreuse</label><br />
-					<input type="checkbox" name="categories" value="Sable" id="cat12" class="filter" /><label for="cat12">Sable</label><br />
-					<input type="checkbox" name="categories" value="Brown" id="cat13" class="filter" /><label for="cat13">Brown</label><br />
-					<input type="checkbox" name="categories" value="White" id="cat14" class="filter" /><label for="cat14">White</label><br />
-					<input type="checkbox" name="categories" value="Gray" id="cat15" class="filter" /><label for="cat15">Gray</label><br />		
-					<input type="checkbox" name="categories" value="Black" id="cat16" class="filter" /><label for="cat16">Black</label><br />				
-				</div>
-				<div class="checkscol">
-					<input type="checkbox" name="categories" value="Aqua" id="cat17" class="filter" /><label for="cat17">Aqua</label><br />
-					<input type="checkbox" name="categories" value="Cornflower" id="cat18" class="filter" /><label for="cat18">Cornflower</label><br />
-					<input type="checkbox" name="categories" value="Tan" id="cat19" class="filter" /><label for="cat19">Tan</label><br />
-					<input type="checkbox" name="categories" value="Maize" id="cat20" class="filter" /><label for="cat20">Maize</label><br />	
-					<input type="checkbox" name="categories" value="Silver" id="cat21" class="filter" /><label for="cat21">Silver</label><br />
-					<input type="checkbox" name="categories" value="Gold" id="cat2" class="filter" /><label for="cat22">Gold</label><br />
-					<input type="checkbox" name="categories" value="Paisley" id="cat23" class="filter" /><label for="cat23">Paisley</label><br />
-					<input type="checkbox" name="categories" value="Plaid" id="cat24" class="filter" /><label for="cat24">Plaid</label><br />						
-				</div>
-				<div class="checkscol">
-					<input type="checkbox" name="categories" value="Polka Dots" id="cat25" class="filter" /><label for="cat25">Polka Dots</label><br />							
-				</div>	
+	<div id="wrapper">
+		<div id="categorycontainer">
+			<div id="categorymenu">
+				<p class="menutext">Hover to Filter by Category</p>
 			</div>
-			<div id="catbuttons">
-				<input type="button" name="categories" value="Select" id="catselect" class="selectfilter" />
-				<input type="button" name="categories" value="Clear" id="catclear" class="clearfilter" />
+			<div id="categorycontrols" class="nothovering">
+				<div id="catchecks">
+					<div class="checkscol">
+						<!-- Each <input> needs a unique ID. The <label>'s 'for' field must match the <input>'s id. It doesn't matter what the ID is, as long as it's unique. -->
+						<!-- The 'value' field of each <input> is the category. It should match the text between the <label> tags. -->
+						<input type="checkbox" name="categories" value="Red" id="cat1" class="filter" /><label for="cat1">Red</label><br />
+						<input type="checkbox" name="categories" value="Orange" id="cat2" class="filter" /><label for="cat2">Orange</label><br />
+						<input type="checkbox" name="categories" value="Yellow" id="cat3" class="filter" /><label for="cat3">Yellow</label><br />
+						<input type="checkbox" name="categories" value="Green" id="cat4" class="filter" /><label for="cat4">Green</label><br />
+						<input type="checkbox" name="categories" value="Blue" id="cat5" class="filter" /><label for="cat5">Blue</label><br />
+						<input type="checkbox" name="categories" value="Violet" id="cat6" class="filter" /><label for="cat6">Violet</label><br />
+						<input type="checkbox" name="categories" value="Indigo" id="cat7" class="filter" /><label for="cat7">Indigo</label><br />
+						<input type="checkbox" name="categories" value="Puce" id="cat8" class="filter" /><label for="cat8">Puce</label><br />
+					</div>
+					<div class="checkscol">		
+						<input type="checkbox" name="categories" value="Lavender" id="cat9" class="filter" /><label for="cat9">Lavender</label><br />
+						<input type="checkbox" name="categories" value="Fuschia" id="cat10" class="filter" /><label for="cat10">Fuschia</label><br />	
+						<input type="checkbox" name="categories" value="Chartreuse" id="cat11" class="filter" /><label for="cat11">Chartreuse</label><br />
+						<input type="checkbox" name="categories" value="Sable" id="cat12" class="filter" /><label for="cat12">Sable</label><br />
+						<input type="checkbox" name="categories" value="Brown" id="cat13" class="filter" /><label for="cat13">Brown</label><br />
+						<input type="checkbox" name="categories" value="White" id="cat14" class="filter" /><label for="cat14">White</label><br />
+						<input type="checkbox" name="categories" value="Gray" id="cat15" class="filter" /><label for="cat15">Gray</label><br />		
+						<input type="checkbox" name="categories" value="Black" id="cat16" class="filter" /><label for="cat16">Black</label><br />				
+					</div>
+					<div class="checkscol">
+						<input type="checkbox" name="categories" value="Aqua" id="cat17" class="filter" /><label for="cat17">Aqua</label><br />
+						<input type="checkbox" name="categories" value="Cornflower" id="cat18" class="filter" /><label for="cat18">Cornflower</label><br />
+						<input type="checkbox" name="categories" value="Tan" id="cat19" class="filter" /><label for="cat19">Tan</label><br />
+						<input type="checkbox" name="categories" value="Maize" id="cat20" class="filter" /><label for="cat20">Maize</label><br />	
+						<input type="checkbox" name="categories" value="Silver" id="cat21" class="filter" /><label for="cat21">Silver</label><br />
+						<input type="checkbox" name="categories" value="Gold" id="cat2" class="filter" /><label for="cat22">Gold</label><br />
+						<input type="checkbox" name="categories" value="Paisley" id="cat23" class="filter" /><label for="cat23">Paisley</label><br />
+						<input type="checkbox" name="categories" value="Plaid" id="cat24" class="filter" /><label for="cat24">Plaid</label><br />						
+					</div>
+					<div class="checkscol">
+						<input type="checkbox" name="categories" value="Polka Dots" id="cat25" class="filter" /><label for="cat25">Polka Dots</label><br />							
+					</div>	
+				</div>
+				<div id="catbuttons">
+					<input type="button" name="categories" value="Select" id="catselect" class="selectfilter" />
+					<input type="button" name="categories" value="Clear" id="catclear" class="clearfilter" />
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="filterable red">
+				<h2>Red</h2>
+				<h3>December 1st, 2011</h3>
+				<p>...Are you suggesting that coconuts migrate? But you are dressed as one... We want a shrubbery!! Who's that then?</p>
+				<p>You don't frighten us, English pig-dogs! Go and boil your bottoms, sons of a silly person! I blow my nose at you, so-called Ah-thoor Keeng, you and all your silly English K-n-n-n-n-n-n-n-nights! Shut up! Well, she turned me into a newt.  Now, look here, my good man-- Well, Mercia's a temperate zone!</p>		
+			</div>
+			<div class="filterable orange">
+				<h2>Orange</h2>
+				<h3>January 17th, 1932</h3>
+				<p>They're not aliens, they're Earth...liens! I am the last of my species, and I know how that weighs on the heart so don't lie to me!  I am the Doctor, and you are the Daleks! The way I see it, every life is a pile of good things and bad things....hey....the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant. *Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!</p>
+				<p>No... It's a thing; it's like a plan, but with more greatness. You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? Sorry, checking all the water in this area; there's an escaped fish.</p>
+				<p>You hit me with a cricket bat. It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! Stop talking, brain thinking. Hush. Did I mention we have comfy chairs? All I've got to do is pass as an ordinary human being. Simple. What could possibly go wrong?</p>		</div>
+			<div class="filterable yellow orange">
+				<h2>Orange Yellow</h2>
+				<h3>June 11th, 2033</h3>
+				<p>Hey, whatcha watching? Anyhoo, your net-suits will allow you to experience Fry's worm infested bowels as if you were actually wriggling through them. Oh, all right, I am. But if anything happens to me, tell them I died robbing some old man. Interesting. No, wait, the other thing: tedious. [having quickly written a book to trap the Big Brain in] There, now he's trapped in a book I wrote: a crummy world of plot holes and spelling errors!</p>
+				<p>Hi, I'm a naughty nurse, and I really need someone to talk to. $9.95 a minute. You know the worst thing about being a slave? They make you work, but they don't pay you or let you go. Look, last night was a mistake. Ask her how her day was. I'll tell them you went down prying the wedding ring off his cold, dead finger. You seem malnourished. Are you suffering from intestinal parasites?</p>
+			</div>
+			<div class="filterable green blue">
+				<h2>Green Blue</h2>
+				<h3>October 23rd, 1892</h3>
+				<p>No! The cat shelter's on to me. With a warning label this big, you know they gotta be fun! Well, let's just dump it in the sewer and say we delivered it. Well, thanks to the Internet, I'm now bored with sex. Is there a place on the web that panders to my lust for violence? I guess if you want children beaten, you have to do it yourself.</p>
+				<p>I had more, but you go ahead.  Check it out, y'all. Everyone who was invited is here.  When will that be?</p>
+				<p>Yes, I saw. You were doing well, until everyone died. And yet you haven't said what I told you to say! How can any of us trust you? Come, Comrade Bender! We must take to the streets! Shinier than yours, meatbag. A sexy mistake.</p>
+			</div>
+			<div class="filterable blue">
+				<h2>Blue</h2>
+				<h3>May 31st, 2003</h3>	
+				<p>Or a guy who burns down a bar for the insurance money! I videotape every customer that comes in here, so that I may blackmail them later. Ask her how her day was. Ow, my spirit! I never loved you.</p>
+				<p>Shut up and get to the point! Why am I sticky and naked? Did I miss something fun? No, I'm Santa Claus! Kif, I have mated with a woman. Inform the men. Actually, that's still true. Come, Comrade Bender! We must take to the streets!</p>
+				<p>I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh... also, comes with double prize money. Ok, we'll go deliver this crate like professionals, and then we'll go ride the bumper cars. Tell her you just want to talk. It has nothing to do with mating. Hello Morbo, how's the family? Look, last night was a mistake.</p>
+			</div>
+			<div class="filterable red">
+				<h2>Red</h2>
+				<h3>September 3rd, 1982</h3>
+				<p>Hi, I'm a naughty nurse, and I really need someone to talk to. $9.95 a minute. And why did 'I' have to take a cab? Hey, what kinda party is this? There's no booze and only one hooker.</p>
+				<p>Guards! Bring me the forms I need to fill out to have her taken away! Your best is an idiot! Too much work. Let's burn it and say we dumped it in the sewer. Ah, yes! John Quincy Adding Machine.  He struck a chord with the voters when he pledged not to go on a killing spree. No! I want to live! There are still too many things I don't own!</p>
+			</div>
+			<div class="filterable yellow">
+				<h2>Yellow</h2>
+				<h3>November 11th, 1956</h3>
+				<p>I hate yogurt. It's just stuff with bits in. I'm the Doctor. Well, they call me the Doctor. I don't know why. I call me the Doctor too. I still don't know why. I am the Doctor, and you are the Daleks! I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship. Father Christmas. Santa Claus. Or as I've always known him: Jeff.</p>
+				<p>You know how I sometimes have really brilliant ideas? It's a fez. I wear a fez now. Fezes are cool. I am the last of my species, and I know how that weighs on the heart so don't lie to me!  Saving the world with meals on wheels. You hit me with a cricket bat. You hate me; you want to kill me! Well, go on! Kill me! KILL ME!</p>
 			</div>
 		</div>
 	</div>
