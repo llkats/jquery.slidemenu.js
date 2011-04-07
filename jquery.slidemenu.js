@@ -22,11 +22,9 @@
 			if (selectedFilters.length === 0) {
 				$('.filterable').slideDown();
 				$('input[name="categories"]').removeClass('current');
-				$('hr').css('display', 'block');
 				return false;
 			} else {
 				$(".filterable").slideUp();
-				$('hr').css("display", "none");
 				$("input[name='categories']").removeClass('current');
 				$.each(selectedFilters, function(index, val) {
 					$("." + val.toLowerCase()).slideDown();
