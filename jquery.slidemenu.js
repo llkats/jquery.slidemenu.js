@@ -18,8 +18,7 @@
 
 		
 		function evaluateChecks(selectedFilters) {
-			// if no checkboxes are selected, show all of the divs
-			if (selectedFilters.length === 0) {
+			if (selectedFilters.length === 0) {			// if no checkboxes are selected, show all of the divs
 				$('.filterable').slideDown();
 				$('input[name="categories"]').removeClass('current');
 				return false;
@@ -36,6 +35,7 @@
 		var clearbutton = $(settings.clearbutton);
 		clearbutton.bind("click", function(e) {
 			$('input:checked[class="filter"]').attr('checked', false); // clear checked items
+			evaluateChecks([]);
 		});
 	
 		var selectbutton = $(settings.selectbutton);
